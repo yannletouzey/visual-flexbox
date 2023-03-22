@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flexbox.css">
+    <title>Flexbox</title>
+</head>
+<body>
+    <header>
+        <h1>Flexbox</h1>
+    </header>
+    <main>
+        <section class="container">
+            <section class="container-message">
+                <p id="message" class="message">Clique sur le bouton pour activer flexbox</p>
+            </section>
+            <section class="container-main">
+                <div class="box-buttons box-container">
+                    <!-- Activate flexbox -->
+                    <div class="box-active-flexbox box-btn">
+                        <button id="display-flex-btn" class="btn display-flex-btn">Display Flex</button>
+                    </div>
+                    <!-- Directions -->
+                    <div class="box-flex-direction-btn box-btn">
+                        <button id="flex-dir-row-btn" class="btn flex-dir-row-btn btn-hide">row</button>
+                        <button id="flex-dir-row-reverse-btn" class="btn flex-dir-row-reverse-btn btn-hide">row reverse</button>
+                        <button id="flex-dir-col-btn" class="btn flex-dir-col-btn btn-hide">colonne</button>
+                        <button id="flex-dir-col-reverse-btn" class="btn flex-dir-col-reverse-btn btn-hide">column reverse</button>
+                    </div>
+                    <!-- Justify -->
+                    <div class="box-justify-btn box-btn">
+                        <button id="justify-start-btn" class="btn justify-start-btn btn-hide">start</button>
+                        <button id="justify-center-btn" class="btn justify-center-btn btn-hide">center</button>
+                        <button id="justify-end-btn" class="btn justify-end-btn btn-hide">end</button>
+                        <button id="justify-space-around-btn" class="btn justify-space-around-btn btn-hide">space around</button>
+                        <button id="justify-space-between-btn" class="btn justify-space-between-btn btn-hide">space between</button>
+                        <button id="justify-space-evenly-btn" class="btn justify-space-evenly-btn btn-hide">space evenly</button>
+                    </div>
+                </div>
+                <div id="box-big" class="box-big box-container">
+                    <div class="box-small box-one">Box One</div>
+                    <div class="box-small box-two">Box Two</div>
+                    <div class="box-small box-three">Box Three</div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="./js/flexbox.js"></script>
+</body>
+</html>
