@@ -25,12 +25,11 @@ h1{
 }
 .container-main{
     display: flex;
+    justify-content: space-between;
 }
 .box-container{
-    border: 1px solid #000;
 }
 .message{
-    /* position: absolute; */
     background: #fff;
     text-align: center;
     margin: 10px auto;
@@ -43,10 +42,9 @@ h1{
     justify-content: space-around;
 }
 .box-container:last-child{
-    width: 70%;
+    width: 60%;
 }
 .box-btn{
-    border: 1px solid #000;
     display: flex;
     justify-content: space-between;
 }
