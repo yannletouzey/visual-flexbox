@@ -11,10 +11,6 @@ h1{
     text-align: center;
 }
 .container{
-    /* position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     width: 70%;
     margin: auto;
     padding: 1rem 3rem;
@@ -26,8 +22,6 @@ h1{
 .container-main{
     display: flex;
     justify-content: space-between;
-}
-.box-container{
 }
 .message{
     background: #fff;
@@ -62,8 +56,14 @@ h1{
 .btn-hide{
     visibility: hidden;
 }
-.box-small{
-    border: 1px solid #f00;
+.box-hide{
+    visibility: hidden;
+}
+.add-btn{
+    font-size: 2rem;
+    font-weight: 100;
+}
+.box-small, .box-small-wrap{
     width: 100px;
     height: 100px;
     display: flex;
@@ -80,6 +80,18 @@ h1{
 }
 .box-small:nth-child(3){
     background: #bce4ff;
+}
+.box-four{
+    background: #f49c29;
+}
+.box-five{
+    background: #f0bcff;
+}
+.box-six{
+    background: #209bed;
+}
+.box-seven{
+    background: #ede920;
 }
 .display-flex-active{
     display: flex;
@@ -113,4 +125,7 @@ h1{
 }
 .justify-space-evenly-active{
     justify-content: space-evenly;
+}
+.flex-flow-active{
+    flex-flow: wrap;
 }

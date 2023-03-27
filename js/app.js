@@ -9,15 +9,30 @@ const justifyEndBtn = document.getElementById("justify-end-btn");
 const justifySpaceAroundBtn = document.getElementById("justify-space-around-btn");
 const justifySpaceBetweenBtn = document.getElementById("justify-space-between-btn");
 const justifySpaceEvenlyBtn = document.getElementById("justify-space-evenly-btn");
+// const wrapBtn = document.getElementById("wrap-btn");
 
 const boxBig = document.getElementById("box-big");
+const boxSmall = document.querySelectorAll(".box-small-wrap");
 const msg = document.getElementById("message");
 
+const addBtn = document.getElementById('add-btn')
+
+// addBtn.addEventListener('click', ()=>{
+//   boxSmall.forEach(e => {
+//     if (e.classList.contains('box-hide')) {
+//       e.classList.remove('box-hide')
+//       addBtn.innerText = "-"
+//     } else {
+//       e.classList.add('box-hide')
+//       addBtn.innerText = "+"
+//     }
+//   });
+// })
 //Voir si c'est pas mieux de grisé les boutons qui ne doivent pas etre activés et rendre inutilisable
 displayFlexBtn.addEventListener("click", () => {
   boxBig.classList.toggle("display-flex-active");
   if (boxBig.classList.contains("display-flex-active")) {
-    msg.textContent = "Display flex => Les boxs se placeront en ligne. C'est le comportement par défaut.";
+    msg.textContent = "Display flex => Les boites se placeront en ligne. C'est le comportement par défaut.";
   } else {
     msg.textContent = "Clique sur le bouton pour activer flexbox";
   }
@@ -61,6 +76,10 @@ displayFlexBtn.addEventListener("click", () => {
   if (boxBig.classList.contains("justify-space-evenly-active")) {
     boxBig.classList.remove("justify-space-evenly-active");
   }
+  // wrapBtn.classList.toggle("btn-hide");
+  // if (boxBig.classList.contains("flex-flow-active")) {
+  //   boxBig.classList.remove("flex-flow-active");
+  // }
 });
 
 flexDirRowBtn.addEventListener("click", () => {
@@ -75,7 +94,7 @@ flexDirRowBtn.addEventListener("click", () => {
     boxBig.classList.remove("flex-dir-col-active");
   }
   if (boxBig.classList.contains("flex-dir-row-active")) {
-    msg.textContent = "Display flex + flex direction row => Les boxs se placeront en ligne.";
+    msg.textContent = "Display flex + flex direction row => Les boites se placeront en ligne.";
   } else {
     msg.textContent = "Display flex";
   }
@@ -92,7 +111,7 @@ flexDirRowReverseBtn.addEventListener("click", () => {
     boxBig.classList.remove("flex-dir-col-active");
   }
   if (boxBig.classList.contains("flex-dir-row-reverse-active")) {
-    msg.textContent = "Display flex + flex direction row reverse => Les boxs se placeront en ligne mais l'ordre de celles-ci sera inversés.";
+    msg.textContent = "Display flex + flex direction row reverse => Les boites se placeront en ligne mais l'ordre de celles-ci sera inversés.";
   } else {
     msg.textContent = "Display flex";
   }
@@ -109,7 +128,7 @@ flexDirColBtn.addEventListener("click", () => {
     boxBig.classList.remove("flex-dir-row-active");
   }
   if (boxBig.classList.contains("flex-dir-col-active")) {
-    msg.textContent = "Display flex + flex direction column => Les boxs se placeront en colonne.";
+    msg.textContent = "Display flex + flex direction column => Les boites se placeront en colonne.";
   } else {
     msg.textContent = "Display flex";
   }
@@ -126,7 +145,7 @@ flexDirColReverseBtn.addEventListener("click", () => {
     boxBig.classList.remove("flex-dir-row-active");
   }
   if (boxBig.classList.contains("flex-dir-col-reverse-active")) {
-    msg.textContent = "Display flex + flex direction column reverse => Les boxs se placeront en colonne mais l'ordre de celles-ci sera inversés.";
+    msg.textContent = "Display flex + flex direction column reverse => Les boites se placeront en colonne mais l'ordre de celles-ci sera inversés.";
   } else {
     msg.textContent = "Display flex";
   }
@@ -153,7 +172,7 @@ justifyStartBtn.addEventListener("click", () => {
     boxBig.classList.remove("justify-space-evenly-active");
   }
   if (boxBig.classList.contains("justify-start-active")) {
-    msg.textContent = "Display flex + justify start => Toutes les boxs seront répartit au début du containeur";
+    msg.textContent = "Display flex + justify start => Toutes les boites seront répartit au début du containeur";
   } else {
     msg.textContent = "Display flex";
   }
@@ -177,7 +196,7 @@ justifyCenterBtn.addEventListener("click", () => {
     boxBig.classList.remove("justify-space-evenly-active");
   }
   if (boxBig.classList.contains("justify-center-active")) {
-    msg.textContent = "Display flex + justify center => Toutes les boxs seront répartit au centre du containeur";
+    msg.textContent = "Display flex + justify center => Toutes les boites seront répartit au centre du containeur";
   } else {
     msg.textContent = "Display flex";
   }
@@ -201,7 +220,7 @@ justifyEndBtn.addEventListener("click", () => {
     boxBig.classList.remove("justify-space-evenly-active");
   }
   if (boxBig.classList.contains("justify-end-active")) {
-    msg.textContent = "Display flex + justify end => Toutes les boxs seront répartit vers la fin du containeur";
+    msg.textContent = "Display flex + justify end => Toutes les boites seront répartit vers la fin du containeur";
   } else {
     msg.textContent = "Display flex";
   }
@@ -278,3 +297,6 @@ justifySpaceEvenlyBtn.addEventListener("click", () => {
     msg.textContent = "Display flex";
   }
 });
+// wrapBtn.addEventListener("click", ()=>{
+//   boxBig.classList.toggle("flex-flow-active")
+// })
